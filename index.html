@@ -113,8 +113,8 @@ pre {
         <button class="copyBtn" data-target="command3Output">Copy Command 3</button>
     </div>
 </div>
-    
-<script>    
+
+<script>
 document.getElementById('generateBtn').addEventListener('click', function () {
     let calculatorName = document.getElementById('calculatorName').value.trim();
     let calculatorFormula = document.getElementById('calculatorFormula').value.trim();
@@ -126,8 +126,8 @@ document.getElementById('generateBtn').addEventListener('click', function () {
         <!-- Inputs -->
     </div>
 
- <style>
-        /* General Calculator Styles */
+    <style>
+                /* General Calculator Styles */
 .calculator-container {
     max-width: 400px; /* Maximum width of the calculator */
     margin: 20px auto; /* Center the calculator */
@@ -184,10 +184,10 @@ document.getElementById('generateBtn').addEventListener('click', function () {
         margin: 10px auto; /* Center with less margin on small screens */
     }
 }
-
     </style>
     `;
     command1 = command1.replace(/\n/g, '&#10;');
+    document.getElementById('command1Output').innerHTML = command1;
 
     // Command 2: JavaScript with optional library usage
     let command2 = `For "${calculatorName}", write JavaScript to implement the functionality using the formula "${calculatorFormula}". Consider using libraries to enhance the calculator. Ensure to:
@@ -196,6 +196,7 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     - Gracefully handle errors
     - Document and justify any used library.`;
     command2 = command2.replace(/\n/g, '&#10;');
+    document.getElementById('command2Output').innerHTML = command2;
 
     // Command 3: Article writing on the calculator's workings
     let command3 = `Write an article on "${calculatorName}", covering its workings, definition, formula "${calculatorFormula}", examples, and relevant information tables. Ensure the article includes:
@@ -205,12 +206,29 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     - A table with relevant information or data
     - A conclusion summarizing the calculator's benefits and applications.`;
     command3 = command3.replace(/\n/g, '&#10;');
+    document.getElementById('command3Output').innerHTML = command3;
+});
 
-    // Displaying commands in their respective output elements
-    document.getElementById('command1Output').innerHTML = command1;
-    document.getElementById('command2Output').innerHTML = command2;
-    document.getElementById('command3Output').innerHTML = command3; // Ensure you have a command3Output element in your HTML
+// Function to copy command text to clipboard
+function copyToClipboard(elementId) {
+    var text = document.getElementById(elementId).innerText;
+    navigator.clipboard.writeText(text).then(function() {
+        console.log('Copied to clipboard');
+    }, function(err) {
+        console.error('Could not copy text: ', err);
+    });
+}
+
+// Adding event listeners to copy buttons
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.copyBtn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var targetId = this.getAttribute('data-target');
+            copyToClipboard(targetId);
+        });
+    });
 });
 </script>
+
 </body>
 </html>
