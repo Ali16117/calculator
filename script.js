@@ -89,11 +89,12 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     command1 = command1.replace(/\n/g, '&#10;'); // Replace newlines with HTML-safe newlines
 
     // Command 2: JavaScript with optional library usage
-    let command2 = `For "${calculatorName}", write JavaScript to implement the functionality using the formula "${calculatorFormula}". Consider using libraries to enhance the calculator. Ensure to:
+    let command2 = `Now write JavaScript for this calculator to implement the functionality using the formula "${calculatorFormula}". Consider using libraries to enhance the calculator. Ensure to:
     - Validate input values
     - Perform calculations and display results in the output field
     - Gracefully handle errors
     - Document and justify any used library.
+    - also write code within <script> </script> tags
     \n Here are instructions for Javascript code 
     **Special Instructions for Handling Units (m², m³) in WordPress:**
     - **Use Unicode Characters Directly**: When concatenating the units with the calculated values, use the Unicode characters for the superscript ² and ³ directly in the strings.
