@@ -93,16 +93,8 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     - Validate input values
     - Perform calculations and display results in the output field
     - Gracefully handle errors
-    - Document and justify any used library.
     - also write code within <script> </script> tags
-    \n Here are instructions for Javascript code 
-    **Special Instructions for Handling Units (m², m³) in WordPress:**
-    - **Use Unicode Characters Directly**: When concatenating the units with the calculated values, use the Unicode characters for the superscript ² and ³ directly in the strings.
-    - **Utilize 'innerHTML' Property**: When assigning the output values to the HTML elements, use the 'innerHTML' property instead of 'textContent' or 'innerText'.
-    - **Example Code Change**: Change lines like 'averageEndArea.textContent = avgEndArea + " m²";' to 'averageEndArea.innerHTML = avgEndArea + " m²";'.
-    - **Be Cautious with 'innerHTML'**: Using 'innerHTML' can expose your site to cross-site scripting (XSS) attacks. In this specific case, it should be safe.
-    - **Test the Changes**: Test the calculator on the WordPress frontend to ensure that the special characters are being displayed correctly.
-    - **Reset Function Update**: If you have a reset function, make sure to update it as well, using 'innerHTML' to clear the values.`;
+    \n Here are instructions for Javascript code `;
     
     command2 = command2.replace(/\[Calculator\]/g, calculatorName);
     command2 = command2.replace(/\[Calculator Formula\]/g, calculatorFormula);
