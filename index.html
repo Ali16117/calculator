@@ -119,74 +119,78 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     let calculatorName = document.getElementById('calculatorName').value.trim();
     let calculatorFormula = document.getElementById('calculatorFormula').value.trim();
 
-    // Command 1: HTML and CSS with a programming theme for the output
-    let command1 = `Create a div structure for "${calculatorName}" with the class "sticky-calculator". Use the following CSS for reference theme, focusing on the programming theme for the output:
+    let command1 = `Create a div structure for "${calculatorName}" with the class "sticky-calculator". Use the following CSS for reference theme, focusing on the programming theme for the output:\n
+<div class="sticky-calculator">\n
+    <!-- Inputs -->\n
+</div>\n
+\n
+<style>\n
+    /* General Calculator Styles */\n
+    .calculator-container {\n
+        max-width: 400px; /* Maximum width of the calculator */\n
+        margin: 20px auto; /* Center the calculator */\n
+        padding: 20px; /* Padding inside the calculator */\n
+        border: 2px solid #f35fa8; /* Border color */\n
+        border-radius: 10px; /* Rounded corners */\n
+        background-color: #fff; /* Background color */\n
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */\n
+    }\n
+    \n
+    /* Input Field Styles */\n
+    .calculator-input {\n
+        width: 100%; /* Full width */\n
+        padding: 10px; /* Padding inside inputs */\n
+        margin-bottom: 15px; /* Space between inputs */\n
+        border: 1px solid #f35fa8; /* Border color */\n
+        border-radius: 5px; /* Rounded corners for inputs */\n
+        box-sizing: border-box; /* Include padding and border in element's width */\n
+    }\n
+    \n
+    /* Button Styles */\n
+    .calculator-button {\n
+        background-color: #f35fa8; /* Button color */\n
+        color: #fff; /* Text color */\n
+        border: none; /* No border */\n
+        padding: 10px 15px; /* Padding inside buttons */\n
+        margin-right: 10px; /* Space between buttons */\n
+        cursor: pointer; /* Pointer cursor on hover */\n
+        border-radius: 5px; /* Rounded corners for buttons */\n
+        font-weight: bold; /* Bold font for buttons */\n
+    }\n
+    \n
+    .calculator-button:hover {\n
+        background-color: #e33e87; /* Slightly darker color on hover */\n
+    }\n
+    \n
+    /* Updated Output Field Styles for Programming Theme */\n
+    .calculator-output {\n
+        width: 100%; /* Full width */\n
+        padding: 10px; /* Padding inside output display */\n
+        border: 1px solid #f35fa8; /* Border color */\n
+        border-radius: 5px; /* Rounded corners for output display */\n
+        margin-top: 15px; /* Space above the output display */\n
+        background-color: #1a1a1a; /* Dark background for programming theme */\n
+        color: #33cc33; /* Green text for programming theme */\n
+        font-family: 'Courier New', Courier, monospace; /* Monospace font for programming theme */\n
+        box-sizing: border-box; /* Include padding and border in element's width */\n
+    }\n
+    \n
+    @media (max-width: 480px) {\n
+        .calculator-container {\n
+            width: 95%; /* Full width on small screens */\n
+            margin: 10px auto; /* Center with less margin on small screens */\n
+        }\n
+    }\n
+</style>`;
 
-    <div class="sticky-calculator">
-        <!-- Inputs -->
-    </div>
+    // Replace newline characters with <br> for HTML display
+    command1 = command1.replace(/\n/g, '<br>');
 
-    <style>
-                /* General Calculator Styles */
-.calculator-container {
-    max-width: 400px; /* Maximum width of the calculator */
-    margin: 20px auto; /* Center the calculator */
-    padding: 20px; /* Padding inside the calculator */
-    border: 2px solid #f35fa8; /* Border color */
-    border-radius: 10px; /* Rounded corners */
-    background-color: #fff; /* Background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-}
-
-/* Input Field Styles */
-.calculator-input {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding inside inputs */
-    margin-bottom: 15px; /* Space between inputs */
-    border: 1px solid #f35fa8; /* Border color */
-    border-radius: 5px; /* Rounded corners for inputs */
-    box-sizing: border-box; /* Include padding and border in element's width */
-}
-
-/* Button Styles */
-.calculator-button {
-    background-color: #f35fa8; /* Button color */
-    color: #fff; /* Text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding inside buttons */
-    margin-right: 10px; /* Space between buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners for buttons */
-    font-weight: bold; /* Bold font for buttons */
-}
-
-.calculator-button:hover {
-    background-color: #e33e87; /* Slightly darker color on hover */
-}
-
-/* Updated Output Field Styles for Programming Theme */
-.calculator-output {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding inside output display */
-    border: 1px solid #f35fa8; /* Border color */
-    border-radius: 5px; /* Rounded corners for output display */
-    margin-top: 15px; /* Space above the output display */
-    background-color: #1a1a1a; /* Dark background for programming theme */
-    color: #33cc33; /* Green text for programming theme */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for programming theme */
-    box-sizing: border-box; /* Include padding and border in element's width */
-}
-
-/* Responsive Design */
-@media (max-width: 480px) {
-    .calculator-container {
-        width: 95%; /* Full width on small screens */
-        margin: 10px auto; /* Center with less margin on small screens */
-    }
-}
-    </style> `;
-    command1 = command1.replace(/\n/g, '&#10;');
     document.getElementById('command1Output').innerHTML = command1;
+
+    // You can apply similar transformations to command2 and command3 if needed
+});
+
 
 
     // Command 2: JavaScript with optional library usage
