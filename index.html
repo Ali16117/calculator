@@ -120,74 +120,57 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     let calculatorFormula = document.getElementById('calculatorFormula').value.trim();
 
     // Command 1: HTML and CSS with a programming theme for the output
-    let command1 = `Create a div structure for "${calculatorName}" with the class "sticky-calculator". Use the following CSS for reference theme, focusing on the programming theme for the output:
+    let command1 = `<!-- HTML structure for the "${calculatorName}" -->
+<div class="sticky-calculator">
+    <!-- Replace with your specific input elements -->
+    <input type="number" id="value" placeholder="Enter Value">
+    <input type="number" id="percentage" placeholder="Enter Percentage">
+    <button onclick="calculatePercentage()">Calculate</button>
+    <div id="result">Result will be displayed here</div>
+</div>
 
-    <div class="sticky-calculator">
-        <!-- Inputs -->
-    </div>
-
-    <style>
-                /* General Calculator Styles */
-.calculator-container {
-    max-width: 400px; /* Maximum width of the calculator */
-    margin: 20px auto; /* Center the calculator */
-    padding: 20px; /* Padding inside the calculator */
-    border: 2px solid #f35fa8; /* Border color */
-    border-radius: 10px; /* Rounded corners */
-    background-color: #fff; /* Background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+<!-- CSS for the "${calculatorName}" -->
+<style>
+.sticky-calculator {
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5; /* Light grey background */
+    border: 1px solid #ddd; /* Light border for definition */
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px; /* Adjust width as needed */
 }
 
-/* Input Field Styles */
-.calculator-input {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding inside inputs */
-    margin-bottom: 15px; /* Space between inputs */
-    border: 1px solid #f35fa8; /* Border color */
-    border-radius: 5px; /* Rounded corners for inputs */
-    box-sizing: border-box; /* Include padding and border in element's width */
+.sticky-calculator input[type="number"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px;
+    margin-bottom: 10px; /* Space between inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-/* Button Styles */
-.calculator-button {
-    background-color: #f35fa8; /* Button color */
-    color: #fff; /* Text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding inside buttons */
-    margin-right: 10px; /* Space between buttons */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners for buttons */
-    font-weight: bold; /* Bold font for buttons */
+.sticky-calculator button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.calculator-button:hover {
-    background-color: #e33e87; /* Slightly darker color on hover */
+.sticky-calculator #result {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
 }
+</style>
+`;
 
-/* Updated Output Field Styles for Programming Theme */
-.calculator-output {
-    width: 100%; /* Full width */
-    padding: 10px; /* Padding inside output display */
-    border: 1px solid #f35fa8; /* Border color */
-    border-radius: 5px; /* Rounded corners for output display */
-    margin-top: 15px; /* Space above the output display */
-    background-color: #1a1a1a; /* Dark background for programming theme */
-    color: #33cc33; /* Green text for programming theme */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for programming theme */
-    box-sizing: border-box; /* Include padding and border in element's width */
-}
+    // Set the command1 content in the 'command1Output' element
+    document.getElementById('command1Output').textContent = command1;
+});
 
-/* Responsive Design */
-@media (max-width: 480px) {
-    .calculator-container {
-        width: 95%; /* Full width on small screens */
-        margin: 10px auto; /* Center with less margin on small screens */
-    }
-}
-    </style>
-    `;
-    command1 = command1.replace(/\n/g, '&#10;');
-    document.getElementById('command1Output').innerHTML = command1;
 
     // Command 2: JavaScript with optional library usage
     let command2 = `For "${calculatorName}", write JavaScript to implement the functionality using the formula "${calculatorFormula}". Consider using libraries to enhance the calculator. Ensure to:
