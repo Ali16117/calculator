@@ -109,7 +109,7 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     command2 = command2.replace(/\n/g, '&#10;'); // Replace newlines with HTML-safe newlines
     
 
-    let command3 = `Write an article on "${calculatorName}", covering its workings, definition, formula "${calculatorFormula}", examples, and relevant information tables. Ensure the article includes:
+    let command3 = `Write an article on "${calculatorName}", covering its workings, definition, formula "${calculatorFormula}", examples, and relevant information tables. please you must write in simple language and dont use difficult words. Ensure the article includes:
     - An introduction to the calculator
     - A detailed explanation of its purpose and functionality
     - Step-by-step examples
