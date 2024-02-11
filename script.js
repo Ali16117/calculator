@@ -28,7 +28,7 @@ document.getElementById('generateBtn').addEventListener('click', function () {
     \n Mention the units of input and outpput as well where aplicable
     \n\nPlease make the design modern and give each element a unique id so that the code will not mess up with the WordPress page layout. 
     Also, add a reset button next to the calculate button to reset the values. 
-    Use #be00d9 as the primary color. Do not use h1, h2, or any headings.
+    Use #F35FA8 as the primary color. Do not use h1, h2, or any headings.
     Also, put a border around the calculator.
 
 
